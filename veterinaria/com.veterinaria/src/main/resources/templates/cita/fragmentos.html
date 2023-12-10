@@ -44,6 +44,22 @@
                                     <input type="text" class="form-control" name="descripcion" required="true"/>
                                 </div>
                                 <div class="mb-3">
+                                    <label for="descripcion">[[#{cita.fecha_cita}]]</label>
+                                    <input type="text" class="form-control" name="fecha cita" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="descripcion">[[#{cita.hora_cita}]]</label>
+                                    <input type="text" class="form-control" name="hora cita" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="descripcion">[[#{cita.nombre_usuario}]]</label>
+                                    <input type="text" class="form-control" name="nombre usuario" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="descripcion">[[#{cita.nombre_mascota}]]</label>
+                                    <input type="text" class="form-control" name="nombre mascota" required="true"/>
+                                </div>
+                                <div class="mb-3">
                                     <label for="activo">[[#{cita.activo}]]</label>
                                     <input class="form-check-input" type="checkbox" name="activo" id="activo"/>
                                 </div>
@@ -76,6 +92,10 @@
                                     <thead class="table-dark">
                                         <tr><th>#</th>
                                             <th>[[#{cita.descripcion}]]</th>
+                                            <th>[[#{cita.fecha_cita}]]</th>
+                                            <th>[[#{cita.hora_cita}]]</th>
+                                            <th>[[#{cita.nombre_usuario}]]</th>
+                                            <th>[[#{cita.nombre_mascota}]]</th>
                                             <th>[[#{cita.activo}]]</th>
                                             <th sec:authorize="hasRole('ROLE_ADMIN')"></th></tr>
                                     </thead>
@@ -136,6 +156,30 @@
                                                     <label for="descripcion">[[#{cita.descripcion}]]</label>
                                                     <input type="text" class="form-control" 
                                                            name="descripcion" th:field="*{descripcion}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="descripcion">[[#{cita.fecha_cita}]]</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="descripcion" th:field="*{fecha cita}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="descripcion">[[#{cita.hora_cita}]]</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="descripcion" th:field="*{hora cita}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="descripcion">[[#{cita.nombre_usuario}]]</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="descripcion" th:field="*{nombre usuario}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="descripcion">[[#{cita.nombre_mascota}]]</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="descripcion" th:field="*{nombre mascota}"
                                                            required="true">
                                                 </div>
                                                 <div class="mb-3">

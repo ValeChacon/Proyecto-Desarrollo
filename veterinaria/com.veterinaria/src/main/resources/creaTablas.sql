@@ -153,10 +153,14 @@ insert into veterinaria.rol (id_rol, nombre, id_usuario) values
  (6,'ROLE_USER',3);
 
 create table veterinaria.cita (
-  id_categoria INT NOT NULL AUTO_INCREMENT,
+  id_cita INT NOT NULL AUTO_INCREMENT,
+  fecha_cita DATE NOT NULL,
+  hora_cita INT NOT NULL,
+  nombre_usuario VARCHAR(20) NOT NULL,
+  nombre_mascota VARCHAR(20) NOT NULL,
   descripcion VARCHAR(30) NOT NULL,
   ruta_imagen varchar(1024),
   activo bool,
-  PRIMARY KEY (id_categoria))
+  PRIMARY KEY (id_cita))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
