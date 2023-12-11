@@ -154,11 +154,11 @@ insert into veterinaria.rol (id_rol, nombre, id_usuario) values
 
 create table veterinaria.cita (
   id_cita INT NOT NULL AUTO_INCREMENT,
-  fecha_cita DATE NOT NULL,
-  hora_cita INT NOT NULL,
-  nombre_usuario VARCHAR(20) NOT NULL,
-  nombre_mascota VARCHAR(20) NOT NULL,
-  descripcion VARCHAR(30) NOT NULL,
+  fecha_cita VARCHAR(20),
+  hora_cita INT,
+  nombre_usuario VARCHAR(20),
+  nombre_mascota VARCHAR(20),
+  descripcion VARCHAR(30),
   ruta_imagen varchar(1024),
   activo bool,
   PRIMARY KEY (id_cita))

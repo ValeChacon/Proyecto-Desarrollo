@@ -99,7 +99,6 @@
                                             <th>[[#{producto.descripcion}]]</th>
                                             <th>[[#{producto.precio}]]</th>
                                             <th>[[#{producto.existencias}]]</th>
-                                            <th>[[#{producto.total}]]</th>
                                             <th>[[#{producto.activo}]]</th>
                                             <th>[[#{producto.categoria}]]</th>
 
@@ -111,7 +110,6 @@
                                             <td>[[${producto.descripcion}]]</td>
                                             <td>[[${producto.precio}]]</td>
                                             <td>[[${producto.existencias}]]</td>
-                                            <td>[[${producto.precio*producto.existencias}]]</td>
                                             <td th:text="${producto.activo} ? 'Activa' : 'Inactiva'" />
                                             <td>[[${producto.categoria.descripcion}]]</td>
                                             <td><a th:href="@{/producto/eliminar/}+${producto.idProducto}"

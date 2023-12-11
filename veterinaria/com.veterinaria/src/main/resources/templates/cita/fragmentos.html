@@ -97,14 +97,18 @@
                                             <th>[[#{cita.nombre_usuario}]]</th>
                                             <th>[[#{cita.nombre_mascota}]]</th>
                                             <th>[[#{cita.activo}]]</th>
-                                            <th sec:authorize="hasRole('ROLE_ADMIN')"></th></tr>
+                                            <!th sec:authorize="hasRole('ROLE_ADMIN')"></th></tr>
                                     </thead>
                                     <tbody>
                                         <tr th:each="cita, contador : ${citas}">
                                             <td>[[${contador.count}]]</td>
                                             <td>[[${cita.descripcion}]]</td>
+                                            <th>[[${cita.fecha_cita}]]</th>
+                                            <th>[[${cita.hora_cita}]]</th>
+                                            <th>[[${cita.nombre_usuario}]]</th>
+                                            <th>[[${cita.nombre_mascota}]]</th>
                                             <td th:text="${cita.activo} ? 'Activa' : 'Inactiva'" />
-                                            <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/cita/eliminar/}+${cita.idCita}"
+                                            <!td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/cita/eliminar/}+${cita.idCita}"
                                                    class="btn btn-danger">
                                                     <i class="fas fa-trash"></i> [[#{accion.eliminar}]]</a>
                                                 <a th:href="@{/cita/modificar/}+${cita.idCita}"

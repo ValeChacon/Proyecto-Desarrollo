@@ -33,6 +33,10 @@ public class Cita implements Serializable {
     @Column (name = "id_cita")
     private Long idCita;
     private String descripcion;
+    private String fecha_cita;
+    private int hora_cita;
+    private String nombre_usuario;
+    private String nombre_mascota;
     private String rutaImagen;
     private boolean activo;
 
@@ -43,8 +47,12 @@ public class Cita implements Serializable {
     
     }
     
-    public Cita(String descripcion, String rutaImagen, boolean activo) {
+    public Cita(String descripcion, String fecha_cita, int hora_cita, String nombre_usuario, String nombre_mascota, String rutaImagen, boolean activo) {
         this.descripcion = descripcion;
+        this.fecha_cita = fecha_cita;
+        this.hora_cita = hora_cita;
+        this.nombre_usuario = nombre_usuario;
+        this.nombre_mascota = nombre_mascota;
         this.rutaImagen = rutaImagen;
         this.activo = activo;
     }
